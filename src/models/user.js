@@ -35,7 +35,7 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   User.beforeCreate((user)=>{
-    console.log(User);
+    console.log(user);
   });
 
   return User;
