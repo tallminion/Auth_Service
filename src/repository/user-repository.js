@@ -24,6 +24,16 @@ class UserRepository {
             throw error;
         }
     }
+
+    async getById(userId){
+        try {
+            const user = await User.findByPk(userId);
+            return user;
+        } catch (error) {
+            console.log("Something went wrong on repository level");
+            throw error;
+        }
+    }
 }
 
 module.exports = UserRepository;
